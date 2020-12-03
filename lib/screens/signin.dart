@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:fastfood/utility/my_constant.dart';
 import 'package:dio/dio.dart';
 import 'package:fastfood/model/user_model.dart';
 import 'package:fastfood/screens/main_rider.dart';
@@ -79,7 +79,7 @@ class _SignInState extends State<SignIn> {
 
   Future<Null> checkAuthen() async {
     String url =
-        'http://192.168.56.1/flutterOne/getUserWhereUser.php?isAdd=true&User=$user';
+        '${MyConstant().domain}/flutterOne/getUserWhereUser.php?isAdd=true&User=$user';
     try {
       Response response = await Dio().get(url);
       print('res = $response');

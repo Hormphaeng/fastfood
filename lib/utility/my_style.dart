@@ -6,6 +6,12 @@ class MyStyle {
   Color darkColor = Colors.green.shade600;
   Color primaryColor = Colors.blue.shade600;
 
+  Widget showProgress() {
+    return Center(
+      child: CircularProgressIndicator(),
+    );
+  }
+
   SizedBox mySizebox() => SizedBox(
         width: 8.0,
         height: 10.0,
@@ -13,7 +19,10 @@ class MyStyle {
 
   Widget titleCenter(String string) {
     return Center(
-      child: Text(string, style:  TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),),
+      child: Text(
+        string,
+        style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+      ),
     );
   }
 
@@ -23,6 +32,14 @@ class MyStyle {
             fontSize: 22.0,
             fontWeight: FontWeight.bold,
             color: Colors.green.shade600),
+      );
+
+       Text showAppNameOrange(String title) => Text(
+        title,
+        style: TextStyle(
+            fontSize: 22.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.orange.shade600),
       );
 
   Text showAppName2(String title) => Text(
