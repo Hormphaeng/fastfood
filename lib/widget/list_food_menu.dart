@@ -28,7 +28,7 @@ class _ListFoodMenuShopState extends State<ListFoodMenuShop> {
     String idShop = preferences.getString('id');
     print('idShop = $idShop');
 
-    //ດືງຂໍ້ມູນ idShop ຜ່ານ API ມາເກັບໄວ້ໃນ url ແລະ ໃຊ້ await Dio().get(url); ມາເກັບໄວ້ໃນ response
+    //ດືງຂໍ້ມູນ idShop ຜ່ານ API ມາເກັບໄວ້ໃນ url ແລະ ໃຊ້ await Dio().get(url);
     String url =
         '${MyConstant().domain}/flutterOne/getFoodWhereIdShop.php?isAdd=true&idShop=$idShop';
     await Dio().get(url).then((value) {
